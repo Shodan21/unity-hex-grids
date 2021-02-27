@@ -218,14 +218,14 @@ namespace CubeCoordinates
         /// </summary>
         /// <param name="origin">Coordinate</param>
         /// <param name="direction">Direction to get (0 to 5 valid)</param>
-        /// <param name="distance">Distance from origin (>=1 valid)</param>
+        /// <param name="distance">Distance from origin (>=1 valid), defaults to 1</param>
         /// <param name="container_label">Container to get results from, defaults to "all"</param>
         /// <returns>Coordinate instance if found, otherwise null</returns>
         public Coordinate
         GetNeighbor(
             Coordinate origin,
             int direction,
-            int distance,
+            int distance = 1,
             string container_label = "all"
         )
         {
@@ -257,14 +257,14 @@ namespace CubeCoordinates
         /// </summary>
         /// <param name="origin">Coordinate</param>
         /// <param name="direction">Direction to get (0 to 5 valid)</param>
-        /// <param name="distance">Distance from origin (>=1 valid)</param>
+        /// <param name="distance">Distance from origin (>=1 valid), defaults to 1</param>
         /// <param name="container_label">Container to get results from, defaults to "all"</param>
         /// <returns>Coordinate instance if found, otherwise null</returns>
         public Coordinate
         GetDiagonalNeighbor(
             Coordinate origin,
             int direction,
-            int distance,
+            int distance = 1,
             string container_label = "all"
         )
         {
