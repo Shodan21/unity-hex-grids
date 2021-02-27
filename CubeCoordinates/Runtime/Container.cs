@@ -134,5 +134,18 @@ namespace CubeCoordinates
         {
             return new List<Vector3>(_contents.Keys);
         }
+        
+        /// <summary>
+        /// Shodan21: Is Coordinate contained in this Container?
+        /// </summary>
+        /// <param name="coordinates">Coordinate List</param>
+        /// <returns>true or false</returns>
+        public bool IsCoordinateInContainer(Coordinate coordinate)
+        {
+            if (_contents.ContainsKey(coordinate.cube))
+                return true;
+            return false;
+        }
+        
     }
 }
