@@ -593,5 +593,25 @@ namespace CubeCoordinates
 
             return container.GetCoordinates(path);
         }
+        
+        /// <summary>
+        /// Returns the radius/ring the cube is located in
+        /// 0 is center, -1 in case cube is null
+        /// </summary>
+		/// <author>Shodan21</author>
+        /// <param name="cube">Cube for which the radius/ring is returned</param>
+        /// <returns>radius/ring as int</returns>
+        public int GetCubeRadius(Vector3 cube)
+        {
+            if (cube == null)
+            {
+                return -1;
+            }
+
+            // array with highest coordinate numbers, only positive numbers
+            int[] array1 = {(int) Math.Abs(cube.x), (int) Math.Abs(cube.y), (int) Math.Abs(cube.z)};
+            // Find maximum number.
+            return array1.Max();
+        }        
     }
 }
