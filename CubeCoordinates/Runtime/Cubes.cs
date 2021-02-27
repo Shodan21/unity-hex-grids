@@ -9,27 +9,54 @@ namespace CubeCoordinates
     /// </summary>
     public static class Cubes
     {
+        /// <summary>
+        /// Shodan21: changed direction to clockwise, starting at top/North with 0
+        /// </summary>
         public static Vector3[]
-            directions =
-            {
-                new Vector3(1.0f, -1.0f, 0.0f),
-                new Vector3(1.0f, 0.0f, -1.0f),
-                new Vector3(0.0f, 1.0f, -1.0f),
-                new Vector3(-1.0f, 1.0f, 0.0f),
-                new Vector3(-1.0f, 0.0f, 1.0f),
-                new Vector3(0.0f, -1.0f, 1.0f)
-            };
+        directions =
+        {
+            new Vector3(0.0f, 1.0f, -1.0f), //was 2
+            new Vector3(1.0f, 0.0f, -1.0f), //was 1
+            new Vector3(1.0f, -1.0f, 0.0f), //was 0
+            new Vector3(0.0f, -1.0f, 1.0f), //was 5
+            new Vector3(-1.0f, 0.0f, 1.0f), //was 4
+            new Vector3(-1.0f, 1.0f, 0.0f) //was 3
+        };
 
         public static Vector3[]
             diagonals =
             {
-                new Vector3(2.0f, -1.0f, -1.0f),
-                new Vector3(1.0f, 1.0f, -2.0f),
-                new Vector3(-1.0f, 2.0f, -1.0f),
-                new Vector3(-2.0f, 1.0f, 1.0f),
-                new Vector3(-1.0f, -1.0f, 2.0f),
-                new Vector3(1.0f, -2.0f, 1.0f)
+                new Vector3(-1.0f, 2.0f, -1.0f), //was 2
+                new Vector3(1.0f, 1.0f, -2.0f), //was 1
+                new Vector3(2.0f, -1.0f, -1.0f), //was 0
+                new Vector3(1.0f, -2.0f, 1.0f) //was 5
+                new Vector3(-1.0f, -1.0f, 2.0f),//was 4
+                new Vector3(-2.0f, 1.0f, 1.0f) //was 3
             };
+
+        // Shodan21: previously used directions starting at SE, counterclock wise
+        
+        // public static Vector3[]
+        //     directions =
+        //     {
+        //         new Vector3(1.0f, -1.0f, 0.0f),
+        //         new Vector3(1.0f, 0.0f, -1.0f),
+        //         new Vector3(0.0f, 1.0f, -1.0f),
+        //         new Vector3(-1.0f, 1.0f, 0.0f),
+        //         new Vector3(-1.0f, 0.0f, 1.0f),
+        //         new Vector3(0.0f, -1.0f, 1.0f)
+        //     };
+        //
+        // public static Vector3[]
+        //     diagonals =
+        //     {
+        //         new Vector3(2.0f, -1.0f, -1.0f),
+        //         new Vector3(1.0f, 1.0f, -2.0f),
+        //         new Vector3(-1.0f, 2.0f, -1.0f),
+        //         new Vector3(-2.0f, 1.0f, 1.0f),
+        //         new Vector3(-1.0f, -1.0f, 2.0f),
+        //         new Vector3(1.0f, -2.0f, 1.0f)
+        //     };
 
         /// <summary>
         /// Caculates adjacent cube coordinate for a given direction and distance
