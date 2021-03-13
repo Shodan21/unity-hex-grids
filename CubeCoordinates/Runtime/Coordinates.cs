@@ -55,6 +55,7 @@ namespace CubeCoordinates
             set
             {
                 _scale = value;
+                CalculateDimensions(); // need to recalculate dimensions due to scale change
             }
         }
 
