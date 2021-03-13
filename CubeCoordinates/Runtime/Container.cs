@@ -136,23 +136,15 @@ namespace CubeCoordinates
         }
         
         /// <summary>
-        /// Shodan21: Is Coordinate contained in this Container?
+        /// Shodan21: Is Coordinate part of this Container?
         /// </summary>
-        /// <param name="coordinates">Coordinate List</param>
+        /// <param name="coordinate">a coordinate which should be checked</param>
         /// <returns>true or false</returns>
         public bool IsCoordinateInContainer(Coordinate coordinate)
         {
-            if (coordinate == null)
-            {
-                Debug.Log("Coordinate is null in Container.IsCoordinateInContainer(coordinate)");
-                Debug.Log(System.Environment.StackTrace);
+            if (coordinate == null)            
                 return false;
-            }   
-            if (_contents.ContainsKey(coordinate.cube))
-                return true;
-            return false;
+            return (_contents.ContainsKey(coordinate.cube));
         }
-        //Git test
-        
     }
 }
