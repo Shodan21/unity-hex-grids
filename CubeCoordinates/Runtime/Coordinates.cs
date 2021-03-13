@@ -43,11 +43,18 @@ namespace CubeCoordinates
 
         private float _scale = 1.0f;
 
+        /// <summary>
+        /// Let's you get and set the scale of the hexgrid, default is 1.0f is not set
+        /// </summary>
         public float scale
         {
             get
             {
                 return _scale;
+            }
+            set
+            {
+                _scale = value;
             }
         }
 
