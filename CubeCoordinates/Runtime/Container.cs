@@ -142,6 +142,12 @@ namespace CubeCoordinates
         /// <returns>true or false</returns>
         public bool IsCoordinateInContainer(Coordinate coordinate)
         {
+            if (coordinate == null)
+            {
+                Debug.Log("Coordinate is null in Container.IsCoordinateInContainer(coordinate)");
+                Debug.Log(System.Environment.StackTrace);
+                return false;
+            }   
             if (_contents.ContainsKey(coordinate.cube))
                 return true;
             return false;
